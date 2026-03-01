@@ -35,7 +35,7 @@ section {
     min-height: 100vh;
     padding: 8rem 2rem;
     margin-top: 64px;
-    display: flex;
+    /* display: flex; */
     align-items: center;
 }
 
@@ -60,41 +60,49 @@ p {
     font-family: righteous;
     font-size: 5.0rem;
     min-height: 110vh;
-    color: #eaffff;
+  color: #fce4ec;
 
-    /* 0 0 4px #fff,
-    0 0 8px #ff5ccf,
-    0 0 16px #ff2ea6,
-    0 0 24px #ff2ea6; */ 
+  text-shadow:
+    0 0 2px rgba(255,255,255,0.6),
+    0 0 6px rgba(220, 80, 150, 0.5),
+    0 0 14px rgba(180, 50, 120, 0.4);
 
-    text-shadow:
-        0 0 4px #ffffff,
-        0 0 8px #00f5d4,
-        0 0 16px #00e0ff,
-        0 0 28px #00e0ff;
-
-    animation: neon-breathe 5s ease-in-out infinite;
+  animation: neon-breathe 7s ease-in-out infinite;
 }   
 
 
 @keyframes neon-breathe {
-    0%, 100% {
+  0%, 100% {
     text-shadow:
-        0 0 4px #ffffff,
-        0 0 8px #00f5d4,
-        0 0 16px #00e0ff,
-        0 0 28px #00e0ff;
-    }
+      0 0 2px rgba(255,255,255,0.6),
+      0 0 6px rgba(220, 80, 150, 0.5),
+      0 0 14px rgba(180, 50, 120, 0.4);
+  }
 
-    50% {
+  50% {
     text-shadow:
-        0 0 6px #ffffff,
-        0 0 12px #7fffd4,
-        0 0 22px #00f5d4,
-        0 0 36px #00f5d4;
-    }
+      0 0 3px rgba(255,255,255,0.7),
+      0 0 10px rgba(220, 80, 150, 0.7),
+      0 0 20px rgba(180, 50, 120, 0.6);
+  }
 }
 
 .asobi {
-    font-family: press-start-2p;;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 16px;      /* 16, 24, 32 など倍数推奨 */
+  image-rendering: pixelated;
+  -webkit-font-smoothing: none;
+}
+
+.githubicon {
+    width: 28px;
+    height: 28px;
+    padding-right: 20px;
+    color: white;
+    fill: currentColor;   /* 重要 */
+}
+
+.linkedinicon {
+    width: 100px;
+    height: 28px;
 }
